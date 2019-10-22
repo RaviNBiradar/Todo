@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todos</title>
+	<link rel="stylesheet" type="text/css" href="css/todo.css">
+</head>
+<body>
+	<div id="todo">
+        <div class="add-todo-section">
+            <input type="text" placeholder="Add New Todo" v-model="todoTitle">
+            <button v-if="!editMode" @click="addnewtodo">Add New Todo</button>
+            <button v-if="editMode" @click="updatetodo">Update Todo</button>
+        </div>
+        <div class="all-todos">
+            
+            <div class="eatch-todo" v-for="todo in todos" :key="todo.id">
+               
+                <span><input type="checkbox" v-model="todo.completed"></span>
+                
+                <span>{{todo.title}} </span>
+                
+                <div class="actions">
+                    
+                    <span>Completed: {{ todo.completed }}</span>
+                    <span class="button" @click="edittodo(todo)">Edit</span> 
+                    <span class="button" @click="deletetodo(todo)">Delete</span>
+                </div>
+                
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+   </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="js/todo.js"></script>
+</html>

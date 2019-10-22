@@ -1,0 +1,48 @@
+body {
+     padding: 30px 100px;
+     box-sizing: border-box;
+     background-color: aliceblue;
+ }
+ .eatch-todo {
+     width: calc((100% - 80px) / 3);
+     float: left;
+     background-color: #ff00eb0d;
+     padding: 10px 15px;
+     box-sizing: border-box;
+     margin-bottom: 30px;
+ }
+ .eatch-todo + .eatch-todo {
+     margin-left: 40px;
+ }
+ .eatch-todo:nth-child(3n+1){
+     margin-left: 0px;
+     clear: both;
+ }
+ .clearfix {
+     clear: both;
+ }
+ .actions {
+     margin-top: 15px;
+ }
+ .actions span + span {
+     padding-left: 15px;
+     box-sizing: border-box;
+     
+ }
+ .add-todo-section {
+     margin-bottom: 30px;
+ }
+ .add-todo-section input {
+         width: 20%;
+          height: 20px;
+          padding: 5px;
+ }
+ .add-todo-section button {
+         height: 30px;
+          margin-left: 10px;
+          background: bisque;
+          cursor: pointer;
+ }
+ .actions .button {
+     cursor: pointer;
+ }
