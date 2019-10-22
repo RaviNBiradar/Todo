@@ -46,3 +46,25 @@ body {
  .actions .button {
      cursor: pointer;
  }
+
+ @media(max-width: 767px) {
+    body {
+      padding: 20px;
+    }
+    .eatch-todo {
+      width: 100%;
+    }
+    .eatch-todo + .eatch-todo {
+       margin-left: 0px;
+   }
+   .add-todo-section input {
+      width: 100%;
+      height: 40px;
+      padding: 5px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+   }
+   .add-todo-section button {
+      margin-left: 0px;
+   }
+ }
